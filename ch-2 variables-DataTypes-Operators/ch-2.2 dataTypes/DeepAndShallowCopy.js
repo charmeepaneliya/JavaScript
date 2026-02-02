@@ -24,7 +24,7 @@ console.log("a",a);
 
 //passed by reference
 
-console.log("=====Shallo copy=====");
+console.log("=====Shallow copy=====");
 
 let student={name: "charmi", age:21,course:"Full Stack"}
 
