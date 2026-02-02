@@ -1,3 +1,5 @@
+
+
 //global scope variable
 var age =24;
 var age = 22;
