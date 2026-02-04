@@ -15,3 +15,17 @@ if (marks >= 80) {
 } else {
     console.log("your fail this examination");
 }
+
+//ladder
+
+//example 2
+
+let temp = 25;
+
+if(temp > 35){
+    console.log("Hot");
+}else if(temp>20){
+    console.log("Normal");
+}else{
+      console.log("Cold");
+}
