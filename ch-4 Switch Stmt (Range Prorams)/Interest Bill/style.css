@@ -1,0 +1,42 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background:#a8dace;
+}
+
+.box {
+  width: 320px;
+  margin: 100px auto;
+  padding: 20px;
+  background: #7a4d9e;
+  border-radius: 8px;
+  text-align: center;
+ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+ color: #a8dace;
+}
+
+input {
+  width: 90%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 8px 15px;
+  background: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+p {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #a8dace;
+}
