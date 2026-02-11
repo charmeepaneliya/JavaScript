@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concat</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(-45deg, #667eea, #764ba2, #6b8cff, #9f5de2);
+            background-size: 400% 400%;
+            animation: gradientMove 10s ease infinite;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Background animation */
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Card animation */
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+            text-align: center;
+            width: 300px;
+            animation: fadeInUp 1s ease;
+            transition: 0.3s;
+        }
+
+        .container:hover {
+            transform: translateY(-8px) scale(1.03);
+        }
+
+        /* Fade animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .h2 {
+            color: #764ba2;
+            animation: glowText 2s infinite alternate;
+        }
+
+        /* Glow heading animation */
+        @keyframes glowText {
+            from {
+                text-shadow: 0 0 5px #764ba2;
+            }
+
+            to {
+                text-shadow: 0 0 20px #764ba2;
+            }
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 25px;
+            background: #667eea;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        /* Button pulse */
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.6);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(102, 126, 234, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(102, 126, 234, 0);
+            }
+        }
+
+        button:hover {
+            background: #764ba2;
+            transform: scale(1.1);
+        }
+
+        #result {
+            margin-top: 20px;
+        }
+
+        /* Result smooth animation */
+        #result h2 {
+            color: #444;
+            background: #f2f2f2;
+            padding: 10px;
+            border-radius: 10px;
+            animation: fadeInResult 0.5s ease;
+        }
+
+        @keyframes fadeInResult {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>concat() Example</h1>
+
+        <h2 class="h2">Hello + Alice</h2>
+        <button id="btn">Click Me</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        let button = document.getElementById("btn");
+        let result = document.getElementById("result");
+
+        button.addEventListener("click", function () {
+            let str1 = "Hello ";
+            let str2 = "Alice";
+
+            let finalString = str1.concat(str2);
+
+            document.getElementById("result").innerHTML = `<h2>Concatenated String: ${finalString}</h2>`;
+        });
+    </script>
+</body>
+
+</html>

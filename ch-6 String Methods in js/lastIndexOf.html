@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lastIndexOf</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(-45deg, #89f7fe, #66a6ff, #ff9a9e, #fad0c4);
+            background-size: 400% 400%;
+            animation: gradientMove 10s ease infinite;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Background Animation */
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Card Animation */
+        .container {
+            background: #ffffff;
+            padding: 40px;
+            width: 320px;
+            text-align: center;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 1s ease;
+            transition: 0.3s;
+        }
+
+        .container:hover {
+            transform: translateY(-8px) scale(1.02);
+        }
+
+        /* Fade Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        h3 {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        /* Button Animation */
+        button {
+            padding: 10px 25px;
+            border: none;
+            border-radius: 25px;
+            background: linear-gradient(45deg, #ff512f, #dd2476);
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+            animation: pulse 2s infinite;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            opacity: 0.9;
+        }
+
+        /* Pulse Effect */
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(221, 36, 118, 0.6);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(221, 36, 118, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(221, 36, 118, 0);
+            }
+        }
+
+        #result {
+            margin-top: 20px;
+        }
+
+        #result h2 {
+            background: #f2f2f2;
+            padding: 10px;
+            border-radius: 10px;
+            color: #333;
+            animation: fadeInResult 0.5s ease;
+        }
+
+        /* Result Fade */
+        @keyframes fadeInResult {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>lastIndexOf()</h1>
+        <h3>hello alice hello</h3>
+        <button id="btn">Click Me</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        document.getElementById("btn").addEventListener("click", function () {
+            let text = "hello alice hello";
+            let index = text.lastIndexOf("hello");
+            document.getElementById("result").innerHTML = `<h2>Last Index of 'hello': ${index}</h2>`;
+        });
+    </script>
+</body>
+
+</html>

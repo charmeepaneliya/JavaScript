@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>include</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(-45deg, #fde2e4, #fad2e1, #e2ece9, #bee1e6);
+            background-size: 400% 400%;
+            animation: gradientBG 12s ease infinite;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Background animation */
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .container {
+            background: #fff1f2;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            animation: floatCard 4s ease-in-out infinite;
+            transition: 0.3s;
+        }
+
+        /* Floating card animation */
+        @keyframes floatCard {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        button {
+            padding: 10px 25px;
+            border: none;
+            border-radius: 25px;
+            background: #ff4d6d;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        /* Button hover animation */
+        button:hover {
+            background: #e84360;
+            transform: scale(1.1);
+        }
+
+        /* Click bounce animation */
+        button:active {
+            animation: bounce 0.3s ease;
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(0.9);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>includes()</h1>
+        <h2>hello alice</h2>
+        <button id="btn">Click Me</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        document.getElementById("btn").addEventListener("click", function () {
+            let text = "hello alice";
+            let check = text.includes("alice");
+            document.getElementById("result").innerHTML = `<h2>Includes 'alice': ${check}</h2>`;
+        });
+    </script>
+</body>
+
+</html>
