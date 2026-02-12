@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search() Example</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #74ebd5, #acb6e5);
+            font-family: Arial;
+        }
+
+        .box {
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 300px;
+        }
+
+        input,
+        button {
+            padding: 8px;
+            margin: 8px 0;
+            width: 90%;
+        }
+
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h3>search() Example</h3>
+        <input type="text" id="text" placeholder="Enter sentence">
+        <button id="btn">Search 'java script'</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        document.getElementById("btn").addEventListener("click",  (e)=> {
+            e.preventDefault();
+
+            let text = document.getElementById("text").value;
+            let pos = text.search("java script");
+
+            if (pos !== -1) {
+                document.getElementById("result").innerHTML = "Found at index: " + pos;
+            } else {
+                document.getElementById("result").innerHTML = "Not Found";
+            }
+        });
+    </script>
+</body>
+
+</html>

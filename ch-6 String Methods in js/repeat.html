@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repeat string method</title>
+    <style>
+        /* 🌌 Dark Neon Background */
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', sans-serif;
+            background: #0f2027;
+            overflow: hidden;
+        }
+
+        /* 🌈 Floating Neon Circles */
+        body::before,
+        body::after {
+            content: "";
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #00f5ff, #ff00c8);
+            filter: blur(120px);
+            animation: float 8s infinite alternate ease-in-out;
+        }
+
+        body::after {
+            width: 300px;
+            height: 300px;
+            animation-delay: 3s;
+        }
+
+        @keyframes float {
+            from {
+                transform: translate(-100px, -100px);
+            }
+
+            to {
+                transform: translate(100px, 100px);
+            }
+        }
+
+        /* 💎 Glass Neon Card */
+        .box {
+            position: relative;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            padding: 40px;
+            width: 350px;
+            border-radius: 20px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+            transition: 0.5s;
+        }
+
+        .box:hover {
+            transform: rotateY(10deg) rotateX(5deg);
+            box-shadow: 0 0 40px rgba(255, 0, 255, 0.6);
+        }
+
+        /* ✨ Heading */
+        h3 {
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        /* 🧊 Input */
+        input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 12px;
+            border: none;
+            outline: none;
+            margin-bottom: 20px;
+            font-size: 14px;
+            transition: 0.4s;
+        }
+
+        input:focus {
+            box-shadow: 0 0 15px #00f5ff;
+            transform: scale(1.05);
+        }
+
+        /* 🔥 Neon Button */
+        button {
+            padding: 10px 30px;
+            border: none;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            background: linear-gradient(90deg, #00f5ff, #ff00c8, #00f5ff);
+            background-size: 200%;
+            color: white;
+            transition: 0.5s;
+        }
+
+        button:hover {
+            background-position: right;
+            box-shadow: 0 0 20px #ff00c8;
+            transform: scale(1.1);
+        }
+
+        /* 🎯 Result Animation */
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            animation: fadeUp 0.6s ease;
+            word-wrap: break-word;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h3>Repeat Word 5 Times</h3>
+        <input type="text" id="text" placeholder="Enter word">
+        <button id="btn">Repeat</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        document.getElementById("btn").addEventListener("click", (e) => {
+            e.preventDefault();
+
+            let text = document.getElementById("text").value;
+
+            let result = text.repeat(5);
+
+            document.getElementById("result").innerHTML = `<p>Result: ${result}</p>`;
+        });
+    </script>
+</body>
+
+</html>

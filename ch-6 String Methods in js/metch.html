@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metch string method</title>
+    <style>
+        /* Animated Background */
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(-45deg, #667eea, #764ba2, #ff758c, #ff7eb3);
+            background-size: 400% 400%;
+            animation: gradientBG 8s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Glass Card */
+        .card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(15px);
+            padding: 40px;
+            border-radius: 20px;
+            width: 350px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            animation: fadeIn 1s ease-in-out;
+            color: white;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            margin-bottom: 15px;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            box-shadow: 0 0 10px #ffffff;
+            transform: scale(1.05);
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            background: linear-gradient(45deg, #ff6a00, #ee0979);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.4s;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            animation: pop 0.5s ease;
+        }
+
+        @keyframes pop {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>match() string method</h2>
+        <input type="text" id="text" placeholder="Enter text" required>
+        <button id="submit">Check</button>
+
+        <p id="result"></p>
+
+    </div>
+
+    <script>
+        document.getElementById("submit").addEventListener("click",(e)=>{
+            e.preventDefault();
+
+            let text=document.getElementById("text").value;
+            let result=text.match("javaScript");
+
+            document.getElementById("result").innerHTML=`<p>result : ${result}<p>`
+        });
+    </script>
+</body>
+</html>
