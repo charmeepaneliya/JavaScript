@@ -2,7 +2,7 @@
 
 let fruits = ["apple","lichi","mango","grapes","dragon"];
 
-////first
+//first
 console.log(fruits[0]);//apple
 
 //last
