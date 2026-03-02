@@ -1,4 +1,3 @@
-
 //splice() method is used to add, remove, or replace elements in an array.
 
 //add
@@ -28,4 +27,3 @@ let numbers = [10, 20, 30, 40, 50];
 numbers.splice(numbers.length);
 
 console.log(numbers);
-
