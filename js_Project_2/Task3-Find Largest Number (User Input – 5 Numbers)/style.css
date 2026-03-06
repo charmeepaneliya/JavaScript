@@ -1,0 +1,103 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI, sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(-45deg,#667eea,#764ba2,#6dd5ed,#2193b0);
+background-size:400% 400%;
+animation:gradientMove 8s ease infinite;
+}
+
+/* Background animation */
+@keyframes gradientMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+form{
+background:white;
+padding:40px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+text-align:center;
+animation:fadeIn 1s ease;
+}
+
+/* Form animation */
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+h1{
+margin-bottom:20px;
+color:#333;
+}
+
+input{
+width:220px;
+padding:10px;
+border:2px solid #ddd;
+border-radius:8px;
+outline:none;
+transition:0.3s;
+}
+
+/* Input focus animation */
+input:focus{
+border-color:#667eea;
+box-shadow:0 0 8px #667eea;
+transform:scale(1.05);
+}
+
+button{
+margin-top:15px;
+padding:10px 20px;
+border:none;
+border-radius:8px;
+background:linear-gradient(45deg,#667eea,#764ba2);
+color:white;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+
+/* Button hover animation */
+button:hover{
+transform:scale(1.1);
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+#result{
+margin-top:20px;
+font-size:22px;
+font-weight:bold;
+color:#333;
+animation:pop 0.5s ease;
+}
+
+/* Result animation */
+@keyframes pop{
+from{
+transform:scale(0.7);
+opacity:0;
+}
+to{
+transform:scale(1);
+opacity:1;
+}
+}
