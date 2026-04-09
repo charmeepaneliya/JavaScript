@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(135deg, #43cea2, #185a9d);
+    min-height: 100vh;
+}
+.card{
+    background-color: rgba(106, 175, 177, 0.71);
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.quize-que{
+    color: rgba(38, 102, 103, 0.996);
+}
+.btn:hover{
+    color:rgba(38, 102, 103, 0.996);
+}
