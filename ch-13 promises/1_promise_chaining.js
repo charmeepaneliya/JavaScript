@@ -8,7 +8,7 @@ const FoodOrder = new Promise((resolve,reject)=>{
     setTimeout(()=>{
         if(order.length > 0){
             resolve(order);
-            console.log("order please");
+            console.log("order placed");
         }else{
             reject("please add some food dish to proceed order");
         }
