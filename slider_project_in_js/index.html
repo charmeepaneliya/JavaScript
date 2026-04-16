@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     
+    <div class="container d-flex justify-content-center align-items-center">
+       
+    <div class="slider row  justify-content-center ">
+        <h3 class="text-white text-center mt-5">JavaScript Image Slider</h3>
+         <div class="col text-end">
+            
+                <button class="btn btn-outline-light" onclick="prevSlide()"><</button>
+            </div>
+        <div class="col">
+            <img class="img img-fluid" id="slide" src="https://images.pexels.com/photos/31629024/pexels-photo-31629024.jpeg" alt="">
+        </div>
+           
+            <div class="col">
+                <button class="btn btn-outline-light" onclick="nextSlide()">></button>
+            </div>
+
+            
+            
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
