@@ -1,4 +1,4 @@
-let images = [
+ let images = [
     "https://images.pexels.com/photos/31629024/pexels-photo-31629024.jpeg",
     "https://images.pexels.com/photos/32028725/pexels-photo-32028725.jpeg",
     "https://images.pexels.com/photos/31658699/pexels-photo-31658699.jpeg",
