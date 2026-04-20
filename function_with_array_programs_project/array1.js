@@ -46,3 +46,88 @@ function reverse(){
 
     document.getElementById("revResult").innerText="Result: " + revResult;
 }
+
+//reduce() method
+
+    function reduce(){
+        let input = document.getElementById("reduce").value;
+
+        let arr = input.split(",").map(Number);
+
+        let sum = arr.reduce((acc,curr)=>{
+            return acc + curr;
+        },0);
+
+        document.getElementById("reduceResult").innerText = "sum: " + sum;
+    }
+
+    //indexof() method
+
+    function findIndex(){
+        let c = document.getElementById("indexof").value.split(",");
+        let d = document.getElementById("indexof2").value;
+
+        let indexofResult = c.indexOf(d);
+
+        document.getElementById("indexofResult").innerText = "index: " + indexofResult;
+        
+    }
+
+    //includes() method
+
+    function includes(){
+        let e = document.getElementById("includes").value.split(",");
+        let f = document.getElementById("includes2").value;
+
+        let includesResult = e.includes(f);
+
+        document.getElementById("includesResult").innerText = "index: " + includesResult;
+        
+    }
+
+    //sort() method
+
+    function sort(){
+        let g = document.getElementById("sort").value.split(",");
+
+        let shortResult = g.sort();
+
+        document.getElementById("shortResult").innerText = "Result: " + shortResult;
+    }
+
+    //descending order method
+
+    function des(){
+        let h = document.getElementById("des").value.split(",").map(Number);
+
+        let desResult = h.sort((a,b)=>{
+            return b-a;
+        });
+
+        document.getElementById("desResult").innerText = "descending order: " + desResult;
+    }
+
+    //join() method
+
+    function join(){
+        let i = document.getElementById("join").value.split(",");
+
+        let joinResult = i.join(" ");
+
+        document.getElementById("joinResult").innerText = "Result: " + joinResult;
+    }
+
+    //slice() method
+
+    function slice(){
+        let j = document.getElementById("slice").value.split(",");
+
+        let k = document.getElementById("slice2").value;
+
+        let sliceResult = j.slice(k);
+
+        document.getElementById("sliceResult").innerText = "Result: " + sliceResult;
+
+    }
+    //find() method
+
