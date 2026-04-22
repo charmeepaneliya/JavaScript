@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.product-card{
+    min-height: 450px !important;
+}
+.product-card .img{
+   height: 350px !important;
+   object-fit: cover;
+}
