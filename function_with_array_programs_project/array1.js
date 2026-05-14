@@ -131,3 +131,37 @@ function reverse(){
     }
     //find() method
 
+    function find(){
+        let l = document.getElementById("find").value.split(",");
+
+        let m = document.getElementById("findValue").value;
+
+        let findResult = l.find((l)=>l>m);
+
+        document.getElementById("findResult").innerText = "Result: " + findResult;
+    }
+
+    //findIndex() method
+
+    function findIndex(){
+        let n = document.getElementById("findIndex").value.split(",");
+
+        let o = document.getElementById("findIndexValue").value;
+
+        let findIndexResult = n.findIndex((n)=>n>o);
+
+        document.getElementById("findIndexResult").innerText = "Result: " + findIndexResult;
+    }
+
+    //every method
+
+    function every(){
+        let p = document.getElementById("every").value.split(",");
+
+        let r = document.getElementById("everyValue").value;
+
+        let everyResult = p.every((z) => z >r);
+
+        document.getElementById("everyResult").innerText = "Result: " + everyResult;
+    }
+
